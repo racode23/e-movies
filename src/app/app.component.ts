@@ -14,5 +14,21 @@ export class AppComponent {
 
   price=10;
 
+
+  imgWidth=100;
+
   sellingPrice=10.50
+
+  attributeValue="movies-app-test-value"
+  isSampleApplied=true;
+
+  bgColor='blueviolet';
+  
+  
+color='';
+setTextColor(_color:string){
+      console.log(_color);
+      this.color=_color;
+
+  }
 }
