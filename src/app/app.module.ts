@@ -14,6 +14,7 @@ import { DetailsMoviesComponent } from './Component/details-movies/details-movie
 import { DetailsReviewsComponent } from './Component/details-reviews/details-reviews.component';
 import { HomeComponent } from './Component/home/home.component';
 import { profitPipe } from './Component/Pipe/profit.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { profitPipe } from './Component/Pipe/profit.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()

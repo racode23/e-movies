@@ -6,29 +6,30 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Title of app component';
+//   title = 'Title of app component';
 
-  today=new  Date();
+//   today=new  Date();
 
-  imageURL='https://dotnethow.net/images/movies/movie-1.jpeg';
+//   imageURL='https://dotnethow.net/images/movies/movie-1.jpeg';
 
-  price=10;
+//   price=10;
 
 
-  imgWidth=100;
+//   imgWidth=100;
 
-  sellingPrice=10.50
+//   sellingPrice=10.50
 
-  attributeValue="movies-app-test-value"
-  isSampleApplied=true;
+//   attributeValue="movies-app-test-value"
+//   isSampleApplied=true;
 
-  bgColor='blueviolet';
+//   bgColor='blueviolet';
   
   
-color='';
-setTextColor(_color:string){
-      console.log(_color);
-      this.color=_color;
+// color='';
+// setTextColor(_color:string){
+//       console.log(_color);
+//       this.color=_color;}
 
-  }
+   fullName="Ravishan Alahakoon";
+  
 }
