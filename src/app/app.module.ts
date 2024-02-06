@@ -15,6 +15,7 @@ import { DetailsReviewsComponent } from './Component/details-reviews/details-rev
 import { HomeComponent } from './Component/home/home.component';
 import { profitPipe } from './Component/Pipe/profit.pipe';
 import { FormsModule } from '@angular/forms';
+import { DetailsActorComponent } from './Component/details-actor/details-actor.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     DetailsReviewsComponent,
     HomeComponent,
     //pipe
-    profitPipe
+    profitPipe,
+    DetailsActorComponent
   ],
   imports: [
     BrowserModule,
