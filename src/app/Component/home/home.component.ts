@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+   error="text-danger"
+   success="text-success"
+   isSucsess=true;
 }

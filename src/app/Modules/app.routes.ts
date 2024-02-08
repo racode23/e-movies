@@ -9,16 +9,26 @@ import { SearchComponent } from "../Component/search/search.component";
 import { NotFoundComponent } from "../Component/not-found/not-found.component";
 
 const  routes:Routes  = [
-    {path:'',component:HomeComponent },
-    {path:'Home',component:HomeComponent},
-    {path:'Details/:id',component:DetailsComponent},
-    {path:'Details/Actors/:id',component:DetailsActorComponent},
-    {path:'Details/Movies/:id',component:DetailsMoviesComponent},
-    {path:'Details/Reviews/:id',component:DetailsReviewsComponent},
-     {path:'search/:movieTitle',component:SearchComponent},
-     {path:'Details',component:DetailsComponent},
+       {path:'',component:HomeComponent },
+       {path:'Home',component:HomeComponent},
+       {path:'Details/:id',component:DetailsComponent},
+       {path:'Details/Actors/:id',component:DetailsActorComponent},
+       {path:'Details/Movies/:id',component:DetailsMoviesComponent},
+       {path:'Details/Reviews/:id',component:DetailsReviewsComponent},
+       {path:'search/:movieTitle',component:SearchComponent},
+       {path:'Details',component:DetailsComponent},
      //404 not found
-     {path:'**',component:NotFoundComponent}
+       {path:'**',component:NotFoundComponent},
+
+     //start nested routes
+    //   {path:'Details/:id',component:DetailsComponent,children:[
+    //     {path:'Actors',component:DetailsActorComponent},
+    //     {path:'Movies',component:DetailsMoviesComponent},
+    //     {path:'Reviews',component:DetailsReviewsComponent},
+    
+    
+    //]}
+     //end nested  routes 
 ];
 
 
