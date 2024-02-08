@@ -11,6 +11,8 @@ export class HomeComponent {
    success="text-success"
    isSucsess=true;
    isvisible=true;
+
+   isActive=false;
    
    FanFavMovie:any[]=[
      {

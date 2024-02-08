@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutesModules } from './Modules/app.routes';
 import { NotFoundComponent } from './Component/not-found/not-found.component';
 import { HeaderDirective } from './Derectives/header.directive';
+import { MyIfDirective } from './Derectives/my-if.directive';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HeaderDirective } from './Derectives/header.directive';
     DetailsActorComponent,
     NotFoundComponent,
     //derective
-    HeaderDirective
+    HeaderDirective,
+    MyIfDirective
   ],
   imports: [
     BrowserModule,
