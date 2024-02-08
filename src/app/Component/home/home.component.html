@@ -1,5 +1,5 @@
 <div class="row">
-  <div  [ngClass]="isSucsess?error:success">Smple text</div>
+  <div  *ngIf="isvisible">Smple text</div>
      <div  class="col-md-8">
         <div id="carouselExampleDark" class="carousel carousel-dark slide">
             <div class="carousel-indicators">
@@ -84,21 +84,21 @@
 <div class="row">
     <h1>Fan Favorites</h1>
     <hr>
-    <div class="col-md-3">
+    <div class="col-md-3" *ngFor="let movie of FanFavMovie">
           <div class="card">
-             <img  src="../../../assets/images/bbb.jpg" class="card-image">
+             <img  [src]="movie.imageURL" class="card-image">
              <div class="card-body">
-                <h1  class="card-title">Movie title</h1>
-                <p class="card-text">Movie Actor</p>
+                <h1  class="card-title">{{movie.title}}</h1>
+                <p class="card-text">{{movie.Actor}}</p>
              </div>
              <div class="card-footer text-center text-muted">
-                 <span style="float:left"><i  class="bi bi-calendar"></i>2023</span>
-                 <span>9.4/10</span>
-                 <span style="float:right"><i  class="bi bi-trophy"></i>1</span>
+                 <span style="float:left"><i  class="bi bi-calendar"></i>{{movie. year}}</span>
+                 <span>{{movie.rate}}</span>
+                 <span style="float:right"><i  class="bi bi-trophy"></i>{{movie.trophy}}</span>
              </div>
           </div>
     </div>
-    <div class="col-md-3">
+    <!-- <div class="col-md-3">
       <div class="card">
          <img  src="../../../assets/images/bbb.jpg" class="card-image">
          <div class="card-body">
@@ -139,5 +139,5 @@
          <span style="float:right"><i  class="bi bi-trophy"></i>1</span>
      </div>
   </div>
-</div>
+</div> -->
 </div>

@@ -19,6 +19,7 @@ import { DetailsActorComponent } from './Component/details-actor/details-actor.c
 import { RouterModule } from '@angular/router';
 import { AppRoutesModules } from './Modules/app.routes';
 import { NotFoundComponent } from './Component/not-found/not-found.component';
+import { HeaderDirective } from './Derectives/header.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { NotFoundComponent } from './Component/not-found/not-found.component';
     //pipe
     profitPipe,
     DetailsActorComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    //derective
+    HeaderDirective
   ],
   imports: [
     BrowserModule,
