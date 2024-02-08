@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { DetailsActorComponent } from './Component/details-actor/details-actor.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutesModules } from './Modules/app.routes';
+import { NotFoundComponent } from './Component/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AppRoutesModules } from './Modules/app.routes';
     HomeComponent,
     //pipe
     profitPipe,
-    DetailsActorComponent
+    DetailsActorComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

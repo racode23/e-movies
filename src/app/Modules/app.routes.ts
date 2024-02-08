@@ -6,6 +6,7 @@ import { DetailsReviewsComponent } from "../Component/details-reviews/details-re
 import { DetailsComponent } from "../Component/details/details.component";
 import { HomeComponent } from "../Component/home/home.component";
 import { SearchComponent } from "../Component/search/search.component";
+import { NotFoundComponent } from "../Component/not-found/not-found.component";
 
 const  routes:Routes  = [
     {path:'',component:HomeComponent },
@@ -15,7 +16,9 @@ const  routes:Routes  = [
     {path:'Details/Movies/:id',component:DetailsMoviesComponent},
     {path:'Details/Reviews/:id',component:DetailsReviewsComponent},
      {path:'search/:movieTitle',component:SearchComponent},
-     {path:'Details',component:DetailsComponent}
+     {path:'Details',component:DetailsComponent},
+     //404 not found
+     {path:'**',component:NotFoundComponent}
 ];
 
 
