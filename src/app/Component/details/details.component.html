@@ -52,7 +52,7 @@
           <app-details-actor></app-details-actor>
     </div>
     <div class="text-center">
-        <a class="btn btn-warning" routerLink="/Details/Actors">view all actors</a>
+        <a class="btn btn-warning" [routerLink]="['/Details/Actors/'+movieId]">view all actors</a>
     </div>
 </div>
 
@@ -65,7 +65,7 @@
         <app-details-reviews> </app-details-reviews>
     </div>
     <div class="text-center">
-        <a class="btn btn-warning"  routerLink="/Details/Reviews>">view all Reviews</a>
+        <a class="btn btn-warning"  [routerLink]="['/Details/Reviews/'+movieId]">view all Reviews</a>
     </div>
 </div>
 
@@ -78,7 +78,7 @@
         <app-details-movies></app-details-movies>
     </div>
     <div class="text-center">
-        <a class="btn btn-warning"  routerLink="/Details/Movies">view all Movies</a>
+        <a class="btn btn-warning"  [routerLink]="['/Details/Movies/'+movieId]">view all Movies</a>
     </div>
 </div>
 

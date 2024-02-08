@@ -10,11 +10,11 @@ import { SearchComponent } from "../Component/search/search.component";
 const  routes:Routes  = [
     {path:'',component:HomeComponent },
     {path:'Home',component:HomeComponent},
-    {path:'Details',component:DetailsComponent},
-    {path:'Details/Actors',component:DetailsActorComponent},
-    {path:'Details/Movies',component:DetailsMoviesComponent},
-    {path:'Details/Reviews',component:DetailsReviewsComponent},
-     {path:'search',component:SearchComponent},
+    {path:'Details/:id',component:DetailsComponent},
+    {path:'Details/Actors/:id',component:DetailsActorComponent},
+    {path:'Details/Movies/:id',component:DetailsMoviesComponent},
+    {path:'Details/Reviews/:id',component:DetailsReviewsComponent},
+     {path:'search/:movieTitle',component:SearchComponent},
      {path:'Details',component:DetailsComponent}
 ];
 

@@ -1,4 +1,5 @@
 import { Component,OnInit,OnChanges,AfterContentInit,AfterViewInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -7,9 +8,17 @@ import { Component,OnInit,OnChanges,AfterContentInit,AfterViewInit} from '@angul
 })
 export class DetailsComponent implements OnInit,OnChanges,AfterContentInit,AfterViewInit{
 
-  constructor() { }
- 
   
+   movieId="";
+  constructor(private _activatedRoute:ActivatedRoute) {
+    
+    this._activatedRoute.params.subscribe((p)=>{
+
+       this.movieId=p["id"];
+       console.log('movie id'+this.movieId);
+    })
+  }
+
   ngOnChanges() {
     console.log('ngOnChanges called.');
   }
@@ -22,6 +31,11 @@ export class DetailsComponent implements OnInit,OnChanges,AfterContentInit,After
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called.');
   }
+
+  /**
+   *
+   */
+  
  
 
 }
