@@ -21,6 +21,7 @@ import { AppRoutesModules } from './Modules/app.routes';
 import { NotFoundComponent } from './Component/not-found/not-found.component';
 import { HeaderDirective } from './Derectives/header.directive';
 import { MyIfDirective } from './Derectives/my-if.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MyIfDirective } from './Derectives/my-if.directive';
     BrowserModule,
     AppRoutingModule,
     AppRoutesModules,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

@@ -1,27 +1,8 @@
-<figure class="figure">
-    <img src="../../../assets/images/63ef0a397f1d781bea0a2464-star-wars-rogue-one-movie-poster.jpg " class="figure-img img-fluid rounded img-thumbnail"  style="max-width: 150px;" alt="...">
-    <figcaption class="figure-caption">Movie Title</figcaption>
-    <figcaption class="figure-caption"><i class="bi bi-star"><b>.1/10</b></i></figcaption>
+<figure class="figure" *ngFor="let data of  Films">
+    <img [src]=data.imageURL class="figure-img img-fluid rounded img-thumbnail"  style="max-width: 150px;" alt="...">
+    <figcaption class="figure-caption">{{data.name}}</figcaption>
+    <figcaption class="figure-caption"><i class="bi bi-star"><b>{{data.point}}</b></i></figcaption>
   </figure>
-  <figure class="figure">
-    <img src="../../../assets/images/bbb.jpg " class="figure-img img-fluid rounded img-thumbnail"  style="max-width: 150px;" alt="...">
-    <figcaption class="figure-caption">brad pitt</figcaption>
-    <figcaption class="figure-caption"><i class="bi bi-star"><b>.1/10</b></i></figcaption>
-  </figure>
-  <figure class="figure">
-    <img src="../../../assets/images/slide1.jpg " class="figure-img img-fluid rounded img-thumbnail"  style="max-width: 150px;" alt="...">
-    <figcaption class="figure-caption">brad pitt</figcaption>
-    <figcaption class="figure-caption"><i class="bi bi-star"><b>.1/10</b></i></figcaption>
-  </figure>
-  <figure class="figure">
-    <img src="../../../assets/images/Untitled.jpg " class="figure-img img-fluid rounded img-thumbnail"  style="max-width: 150px;" alt="...">
-    <figcaption class="figure-caption">brad pitt</figcaption>
-    <figcaption class="figure-caption"><i class="bi bi-star"><b>.1/10</b></i></figcaption>
-  </figure>
-  <figure class="figure">
-    <img src="../../../assets/images/slide3.jpg " class="figure-img img-fluid rounded img-thumbnail"  style="max-width: 150px;" alt="...">
-    <figcaption class="figure-caption">brad pitt</figcaption>
-    <figcaption class="figure-caption"><i class="bi bi-star"><b>.1/10</b></i></figcaption>
-  </figure>
+  
 
 

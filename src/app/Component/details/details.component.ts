@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component,OnInit,OnChanges,AfterContentInit,AfterViewInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,10 +8,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent implements OnInit,OnChanges,AfterContentInit,AfterViewInit{
+  [x: string]: any;
 
   
    movieId="";
-  constructor(private _activatedRoute:ActivatedRoute) {
+  constructor(private _activatedRoute:ActivatedRoute,private httpClient:HttpClient) {
     
     this._activatedRoute.params.subscribe((p)=>{
 
@@ -18,12 +20,21 @@ export class DetailsComponent implements OnInit,OnChanges,AfterContentInit,After
        console.log('movie id'+this.movieId);
     })
   }
+  Details3:any[]=[];
+  loadMovieSummery(){
+     this.httpClient.get('assets/data/TopMovies.json').subscribe((data:any)=>{
+
+      this.Details3=data;
+     })
+
+ }
 
   ngOnChanges() {
     console.log('ngOnChanges called.');
   }
   ngOnInit(): void {
-    console.log('ngOnChanges called.');
+
+    this.loadMovieSummery();
   }
   ngAfterContentInit(): void {
     console.log('ngOnInitcalled.');
@@ -32,10 +43,35 @@ export class DetailsComponent implements OnInit,OnChanges,AfterContentInit,After
     console.log('ngAfterViewInit called.');
   }
 
-  /**
-   *
-   */
   
+ 
+
+  Details:any[]=[
+
+  {
+    name:"genre1"
+  },
+  {
+    name:"genre2"
+  },
+  {
+    name:"genre3"
+  }
+  ];
+  Details2:any[]=[
+    {
+      name:"actor1"
+    },
+    {
+      name:"actor2"
+    },
+    {
+      name:"actor3"
+    }
+  ];
+ 
+
+ 
  
 
 }
