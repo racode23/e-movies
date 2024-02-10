@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../../Services/movies.service';
+import { error } from 'console';
 
 @Component({
   selector: 'app-home',
@@ -13,44 +15,34 @@ export class HomeComponent implements OnInit{
   /**
    *
    */
-  constructor(private httpClient:HttpClient) {
+  constructor(private httpClient:HttpClient,private moviesService:MoviesService) {
     
-    
+   
   }
   ngOnInit(): void {
     this.getFanFavariteMovies();
-    this.getTopMovies();
+   
 
   }
+  FanFavariteMovies:any[]=[];
 
   getFanFavariteMovies(){
+     this.moviesService.getFanFavariteMovies()
+    .subscribe({
 
-       this.httpClient.get<any[]>('assets/data/FanFavariteMovies.json').subscribe((data:any[])=>{
-          this.FanFavMovie=data;
+       next:(data:any[])=>{
 
-       })
+          this.FanFavariteMovies=data;
+       },
+       error:(error)=>{
+             console.log("FanFavarite movie error");
+
+       },
+       complete:()=>{
+        console.log("completed!!!!!!!!!!!!!!!!!");
+       }
+
+    })
+      
   }
-
-  getTopMovies(){
-
-
-  }
-  
-
-
-
-
-
-   error="text-danger"
-   success="text-success"
-   isSucsess=true;
-   isvisible=true;
-
-   isActive=false;
-   
-   FanFavMovie:any[]=[]
-   
-
-
-
 }

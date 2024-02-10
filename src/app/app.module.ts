@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,8 @@ import { HeaderDirective } from './Derectives/header.directive';
 import { MyIfDirective } from './Derectives/my-if.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchMovieComponent } from './Component/search-movie/search-movie.component';
+import { MoviesService } from './Services/movies.service';
+import { GlobalErrorHandalingService } from './Services/global-error-handaling.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { SearchMovieComponent } from './Component/search-movie/search-movie.comp
     HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    MoviesService,
+    {provide:ErrorHandler,useClass:GlobalErrorHandalingService}
   ],
   bootstrap: [AppComponent]
 })
