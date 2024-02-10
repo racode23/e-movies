@@ -7,7 +7,6 @@ import { NavbarComponent } from './Component/navbar/navbar.component';
 import { FooterComponent } from './Component/footer/footer.component';
 import { DetailsComponent } from './Component/details/details.component';
 import { NotAuthorizedComponent } from './Component/not-authorized/not-authorized.component';
-import { SearchComponent } from './Component/search/search.component';
 import { LoderComponent } from './Component/loder/loder.component';
 import { ModelComponent } from './Component/model/model.component';
 import { DetailsMoviesComponent } from './Component/details-movies/details-movies.component';
@@ -22,6 +21,7 @@ import { NotFoundComponent } from './Component/not-found/not-found.component';
 import { HeaderDirective } from './Derectives/header.directive';
 import { MyIfDirective } from './Derectives/my-if.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchMovieComponent } from './Component/search-movie/search-movie.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,6 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     DetailsComponent,
     NotAuthorizedComponent,
-    SearchComponent,
     LoderComponent,
     ModelComponent,
     DetailsMoviesComponent,
@@ -42,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     //derective
     HeaderDirective,
-    MyIfDirective
+    MyIfDirective,
+    SearchMovieComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -5,8 +5,9 @@ import { DetailsMoviesComponent } from "../Component/details-movies/details-movi
 import { DetailsReviewsComponent } from "../Component/details-reviews/details-reviews.component";
 import { DetailsComponent } from "../Component/details/details.component";
 import { HomeComponent } from "../Component/home/home.component";
-import { SearchComponent } from "../Component/search/search.component";
+
 import { NotFoundComponent } from "../Component/not-found/not-found.component";
+import { SearchMovieComponent } from "../Component/search-movie/search-movie.component";
 
 const  routes:Routes  = [
        {path:'',component:HomeComponent },
@@ -15,7 +16,7 @@ const  routes:Routes  = [
        {path:'Details/Actors/:id',component:DetailsActorComponent},
        {path:'Details/Movies/:id',component:DetailsMoviesComponent},
        {path:'Details/Reviews/:id',component:DetailsReviewsComponent},
-       {path:'search/:movieTitle',component:SearchComponent},
+       {path:'search/:movieTitle',component:SearchMovieComponent},
        {path:'Details',component:DetailsComponent},
      //404 not found
        {path:'**',component:NotFoundComponent},
