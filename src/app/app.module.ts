@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchMovieComponent } from './Component/search-movie/search-movie.component';
 import { MoviesService } from './Services/movies.service';
 import { GlobalErrorHandalingService } from './Services/global-error-handaling.service';
+import { FeedbackComponent } from './Component/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { GlobalErrorHandalingService } from './Services/global-error-handaling.s
     //derective
     HeaderDirective,
     MyIfDirective,
-    SearchMovieComponent
+    SearchMovieComponent,
+    FeedbackComponent
     
   ],
   imports: [

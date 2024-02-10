@@ -8,6 +8,7 @@ import { HomeComponent } from "../Component/home/home.component";
 
 import { NotFoundComponent } from "../Component/not-found/not-found.component";
 import { SearchMovieComponent } from "../Component/search-movie/search-movie.component";
+import { FeedbackComponent } from "../Component/feedback/feedback.component";
 
 const  routes:Routes  = [
        {path:'',component:HomeComponent },
@@ -18,6 +19,7 @@ const  routes:Routes  = [
        {path:'Details/Reviews/:id',component:DetailsReviewsComponent},
        {path:'search/:movieTitle',component:SearchMovieComponent},
        {path:'Details',component:DetailsComponent},
+       {path:'feedback',component:FeedbackComponent},
      //404 not found
        {path:'**',component:NotFoundComponent},
 
